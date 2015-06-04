@@ -44,3 +44,5 @@ module.exports = function(app) {
     app.use(errorHandler()); // Error handler - has to be last
   }
 };
+
+// check this out!
