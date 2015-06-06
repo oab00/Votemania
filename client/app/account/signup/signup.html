@@ -1,10 +1,15 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <img class="yeoman-img" src="assets/images/yeoman.png" alt="I'm Yeoman">
+    <p class="lead">Sign up to make polls now!</p>
+  </div>
+</header>
+
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <h1>Sign up</h1>
-    </div>
     <div class="col-sm-12">
       <form class="form" name="form" ng-submit="register(form)" novalidate>
 
@@ -58,6 +63,7 @@
           <button class="btn btn-inverse btn-lg btn-login" type="submit">
             Sign up
           </button>
+          <span id="or">or</span>
           <a class="btn btn-default btn-lg btn-register" href="/login">
             Login
           </a>
