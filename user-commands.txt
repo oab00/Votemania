@@ -1,0 +1,15 @@
+
+## start the database ##
+./mongod
+
+## serve the app ##
+grunt serve --force
+
+## commit git repo ##
+git commit -am "your commit message"
+
+## push new commit to github ##
+git push origin master
+
+## push to heroku ## href= votemania.herokuapp.com
+grunt --force && grunt buildcontrol:heroku
