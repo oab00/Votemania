@@ -1,0 +1,54 @@
+.poll {
+	text-align: center;
+	position: relative;
+}
+
+.poll h4 {
+	margin-top: 30px;
+}
+
+.poll input {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.poll .options {
+	margin-top: 2px;
+}
+
+.options-div {
+	margin: 0 auto;
+	width: 400px;
+	text-align: left;
+	position: relative;
+}
+
+.options-div i {
+	margin-left: -25px;
+	position: absolute;
+	right: 5px;
+	top: 11px;
+	cursor: pointer;
+	color: #f45f5f;
+}
+
+.label-div {
+	width: 400px;
+	margin: 3px auto;
+	text-align: left;
+	position: relative;
+}
+
+.poll label {
+	font-size: 11px;
+}
+
+.poll .add-more {
+	position: absolute;
+	right: 0;
+}
+
+.poll .submit-poll {
+	margin-top: 20px;
+	width: 180px;
+}
