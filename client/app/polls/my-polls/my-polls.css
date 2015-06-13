@@ -1,0 +1,33 @@
+.my-polls {
+	text-align: center;
+}
+
+.my-polls h2 {
+	margin-bottom: 20px;
+}
+
+.polls {
+	background: lightblue;
+	width: 400px;
+	display: inline-block;
+	padding: 2px;
+	margin-bottom: 50px;
+}
+
+.poll-option {
+	margin: 2px;
+	cursor: pointer;
+	border: 1px solid black;
+	padding: 20px;
+	text-align: left;
+}
+
+.poll-option h4 {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.poll-option li span {
+	float: right;
+	margin-right: 150px;
+}

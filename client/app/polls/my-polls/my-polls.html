@@ -1,0 +1,32 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <p class="lead">Would you like something else?</p>
+    <a href="/new-poll"><button class="poll-button btn btn-success btn-lg">New Poll</button></a>
+    <a href="/my-polls"><button class="btn btn-info btn-lg">My Polls</button></a>
+  </div>
+</header>
+
+<div class="container my-polls">
+ 
+	<h2>My Polls</h2>
+
+	<div class="polls" ng-show="available">
+
+		<div class="poll-option" ng-repeat="poll in polls">
+			<h4>{{ poll.question }}</h4>
+			<ul>
+				<li ng-repeat="item in poll.items">
+					<strong>{{item[0]}}</strong> <span>{{item[1]}}</span>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="no-polls" ng-hide="available">
+		No polls found.
+	</div>
+
+</div>
