@@ -11,12 +11,12 @@
 <div class="container poll">
   <h2>Create New Poll</h2>
   <h4>Pull Question?</h4>
-  <input type="text" class="form-control" placeholder="What's your favourite animal?">
+  <input ng-model="question" type="text" class="form-control" placeholder="{{questionPlaceHolder}}">
 
   <h4>Pull Options</h4>
 
   <div ng-repeat="option in options" class="options-div options">
-    <input type="text" class="form-control options" placeholder="{{option.placeholder}}">
+    <input ng-model="option.text" type="text" class="form-control options" placeholder="{{option.placeholder}}">
     <i ng-hide="option.hidden" class="fa fa-minus-circle" ng-click="removeOption($index)"></i>
   </div>
 
