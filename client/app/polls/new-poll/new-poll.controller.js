@@ -57,13 +57,13 @@ angular.module('workspaceApp')
                 items: optionsArray
             });
 
-            console.log('done.');
+            //console.log('done.');
 
-            $scope.clear();
+            $location.path('/my-polls');
         }
 
         else {
-            console.log('not valid.');
+            //console.log('not valid.');
         }
 
     };

@@ -1,0 +1,46 @@
+.question-head {
+	font-size: 35px;
+}
+
+.show-poll-container {
+	text-align: center;
+}
+
+.show-poll {
+	text-align: left;
+	background-color: lightgrey;
+	display: inline-block;
+	width: 400px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.show-poll form {
+	margin: 15px 20px;
+}
+
+.show-poll label {
+	display: block;
+	margin: 0;
+	padding: 5px;
+}
+
+.show-poll label:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.show-poll .submit-vote {
+	margin-left: 90px;
+}
+
+
+
+/* resutls */
+.poll-result {
+	text-align: left;
+	background-color: lightgrey;
+	display: inline-block;
+	width: 440px;
+	padding: 20px;
+	margin-bottom: 20px;
+}

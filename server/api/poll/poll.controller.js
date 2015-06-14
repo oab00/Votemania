@@ -37,3 +37,27 @@ exports.create = function (req, res, next) {
   	//res.json({ message: 'Poll \'' + poll.question + '\' created.' });
   })
 };
+
+// Updates an existing thing in the DB.
+exports.update = function(req, res) {
+  var userId = req.body.username;
+  Poll.find({
+    username: userId
+  }, function(err, polls) {
+    if (err) return res.json(422, err);
+
+    var arr = req.body.items;
+
+    polls[req.body.poll_index - 1].items = arr;
+    
+    polls[req.body.poll_index - 1].save(function(err) {
+      if (err) return res.json(422, err);
+      
+      res.json(200);
+    });
+  });
+};
+
+exports.remove = function(req, res) {
+
+};

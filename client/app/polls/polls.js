@@ -7,5 +7,11 @@ angular.module('workspaceApp')
       }).when('/my-polls', {
       	templateUrl: 'app/polls/my-polls/my-polls.html',
         controller: 'MyPollsCtrl'
+      }).when('/vote/:userId/:pollId', {
+        templateUrl: 'app/polls/show-poll/show-poll.html',
+        controller: 'ShowPollCtrl'
+      }).when('/vote/:userId/:pollId/r', {
+        templateUrl: 'app/polls/show-poll/poll-result.html',
+        controller: 'ShowPollCtrl'
       });
   });

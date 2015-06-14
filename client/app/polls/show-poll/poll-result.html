@@ -1,0 +1,21 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h2 class="lead question-head">Question by {{poll.username}} <hr /> <span>{{poll.question}}</span></h2>
+  </div>
+</header>
+
+<div class="container show-poll-container">
+
+	<div class="poll-result">
+		<a ng-href="{{urlResult}}"><button class="back-button btn btn-info">Back</button></a>
+		<h1>Results</h1>
+
+		
+
+		<!--Div that will hold the pie chart-->
+    	<div id="chart_div"></div>
+	</div>
+
+</div>

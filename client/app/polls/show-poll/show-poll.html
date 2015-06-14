@@ -1,0 +1,22 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h2 class="lead question-head">Question by {{poll.username}} <hr /> <span>{{poll.question}}</span></h2>
+  </div>
+</header>
+
+<div class="container show-poll-container">
+
+	<div class="show-poll">
+		<h3>Options:</h3>
+		<form>
+			<div class="option" ng-repeat="item in poll.items">
+				<label><input type="radio" name="pollOption" value="{{item[0]}}" ng-model="$parent.chosenOne"> {{item[0]}}</label>
+			</div>
+		</form>
+		<button ng-click="voteSubmit()" class="submit-vote btn btn-primary">Submit Vote</button>
+		<a ng-href="{{url}}"><button class="results btn btn-success">Results</button></a>
+	</div>
+
+</div>

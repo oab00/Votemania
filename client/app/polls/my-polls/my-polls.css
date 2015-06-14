@@ -18,7 +18,6 @@
 	margin: 2px;
 	cursor: pointer;
 	border: 1px solid black;
-	padding: 20px;
 	text-align: left;
 }
 
@@ -30,4 +29,15 @@
 .poll-option li span {
 	float: right;
 	margin-right: 150px;
+}
+
+.poll-option a {
+	background-color: rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+	color: black;
+	display: block;
+	padding: 20px;
+}
+.poll-option a:hover {
+	background-color: rgba(0, 0, 0, 0.2);
 }

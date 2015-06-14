@@ -15,12 +15,14 @@
 	<div class="polls" ng-show="available">
 
 		<div class="poll-option" ng-repeat="poll in polls">
-			<h4>{{ poll.question }}</h4>
-			<ul>
-				<li ng-repeat="item in poll.items">
-					<strong>{{item[0]}}</strong> <span>{{item[1]}}</span>
-				</li>
-			</ul>
+			<a ng-href="{{poll.url}}">
+				<h4>{{ poll.question }}</h4>
+				<ul>
+					<li ng-repeat="item in poll.items">
+						<strong>{{item[0]}}</strong> <span>{{item[1]}}</span>
+					</li>
+				</ul>
+			</a>
 		</div>
 
 	</div>

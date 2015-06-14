@@ -8,6 +8,7 @@ var router = express.Router();
 router.get('/', controller.index);
 router.post('/me', controller.me);
 router.post('/', controller.create);
-// TODO: make a delete function
+router.put('/update', controller.update);
+//router.delete('/update', controller.remove);
 
 module.exports = router;

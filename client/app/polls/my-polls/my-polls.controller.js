@@ -12,10 +12,11 @@ angular.module('workspaceApp')
         username: username,
     }).success(function(polls) {
     	
-    	polls.forEach(function(poll) {
+    	polls.forEach(function(poll, index) {
     		$scope.polls.push({
     			question: poll.question,
-    			items: poll.items
+    			items: poll.items,
+                url: '../vote/' + username + '/' + (index + 1)
     		});
     	});
 
