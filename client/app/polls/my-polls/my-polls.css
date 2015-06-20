@@ -19,6 +19,7 @@
 	cursor: pointer;
 	border: 1px solid black;
 	text-align: left;
+	position: relative;
 }
 
 .poll-option h4 {
@@ -31,13 +32,31 @@
 	margin-right: 150px;
 }
 
-.poll-option a {
+.poll-option a.href {
 	background-color: rgba(0, 0, 0, 0.1);
 	text-decoration: none;
 	color: black;
 	display: block;
 	padding: 20px;
 }
-.poll-option a:hover {
+.poll-option a.href:hover {
 	background-color: rgba(0, 0, 0, 0.2);
+}
+
+div.href {
+	display: inline;
+}
+
+div.delete-button-container {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.delete-button button {
+	cursor: crosshair;
+	font-weight: normal;
+	padding: 5px 10px;
+	font-size: 20px;
 }

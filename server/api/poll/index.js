@@ -9,6 +9,6 @@ router.get('/', controller.index);
 router.post('/me', controller.me);
 router.post('/', controller.create);
 router.put('/update', controller.update);
-//router.delete('/update', controller.remove);
+router.delete('/update', controller.remove);
 
 module.exports = router;

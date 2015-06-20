@@ -59,5 +59,7 @@ exports.update = function(req, res) {
 };
 
 exports.remove = function(req, res) {
-
+  var userId = req.body.username;
+  console.log(username);
+  res.json(200);
 };

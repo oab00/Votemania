@@ -1,5 +1,5 @@
 angular.module('workspaceApp')
-  .controller('MyPollsCtrl', function ($scope, Auth, $location, $http) {
+  .controller('MyPollsCtrl', function ($scope, Auth, $location, $http, $route) {
     
     if (!Auth.isLoggedIn()) {
       $location.path('/');
@@ -9,7 +9,7 @@ angular.module('workspaceApp')
     $scope.polls = [];
 
     $http.post('/api/polls/me', {
-        username: username,
+        username: username
     }).success(function(polls) {
     	
     	polls.forEach(function(poll, index) {
@@ -24,5 +24,15 @@ angular.module('workspaceApp')
 
     }); 
     
+    $scope.deletePoll = function() {
+        $http.delete('/api/polls/update', {
+            username: username
+        }).success(function(data) {
+            console.log('yess');
+            $route.reload();
+        });
+
+        
+    };
 
 });

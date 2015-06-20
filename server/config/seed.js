@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var User = require('../api/poll/poll.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -42,6 +43,11 @@ User.find({}).remove(function() {
     name: 'Admin',
     email: 'admin@admin.com',
     password: 'admin'
+  }, {
+    provider: 'local',
+    name: 'oab',
+    email: 'a@a',
+    password: 'bbb'
   }, function() {
       console.log('finished populating users');
     }

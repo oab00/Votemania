@@ -78,6 +78,8 @@ angular.module('workspaceApp')
                 // Instantiate and draw our chart, passing in some options.
                 var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
                 chart.draw(data, options);
+                window.scrollTo(0,document.body.scrollHeight);
+
             }
         });
     }
