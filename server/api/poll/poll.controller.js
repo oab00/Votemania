@@ -59,7 +59,20 @@ exports.update = function(req, res) {
 };
 
 exports.remove = function(req, res) {
-  var userId = req.body.username;
-  console.log(username);
-  res.json(200);
+  var userId = req.params.id;
+  var pollIndex = req.params.index;
+  
+  Poll.find({
+    username:userId
+  },function(err, polls) {
+
+    Poll.findByIdAndRemove(polls[pollIndex]._id, function(err, poll) {
+      if(err) return res.send(500, err);
+      return res.send(204);
+    });
+
+    //res.json(polls[pollIndex]);
+  });
+  
+  
 };

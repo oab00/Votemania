@@ -16,19 +16,19 @@ angular.module('workspaceApp')
     		$scope.polls.push({
     			question: poll.question,
     			items: poll.items,
-                url: '../vote/' + username + '/' + (index + 1)
+                url: '../vote/' + username + '/' + (index + 1),
+                index: index
     		});
     	});
 
     	$scope.available = ($scope.polls.length > 0) ? true : false;
-
     }); 
     
-    $scope.deletePoll = function() {
-        $http.delete('/api/polls/update', {
-            username: username
-        }).success(function(data) {
-            console.log('yess');
+
+    $scope.deletePoll = function(event) {
+        $http.delete('/api/polls/update/' + username + '/' + event.target.id)
+        .success(function(data) {
+            console.log(data);
             $route.reload();
         });
 
